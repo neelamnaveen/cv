@@ -5,6 +5,10 @@
   align-items: center;
   width: 96%;
 }
+.cert {
+    font-size: 13px!important;
+    padding-bottom: 10px;
+}
 @media screen and (min-width: 600px) {
     .third {
         display: flex;
