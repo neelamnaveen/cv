@@ -9,10 +9,27 @@
     font-size: 14px!important;
     padding-bottom: 10px;
 }
+
+.exp-con {
+    display: flex;
+    left: -10px;
+    position: relative;
+}
+
+.exp-icon {
+    align-items: center;
+    display: flex;
+}
+
+.exp-role {
+    display: flex;
+    flex-direction: column;
+}
+
 @media screen and (min-width: 600px) {
     .third {
         display: flex;
-        height: 98.5%;
+        height: 98.2%;
     }
     .nav {
         display: flex;
