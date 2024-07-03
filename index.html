@@ -20,6 +20,21 @@
         font-family: "Roboto", sans-serif
     }
 </style>
+<script>
+    function updateExp() {
+        var now = new Date();
+        var wiproJoiningDate = new Date(2018, 6, 11);
+        var years = now.getFullYear() - wiproJoiningDate.getFullYear();
+        var months = (now.getMonth()) - wiproJoiningDate.getMonth();
+        document.getElementById("fullExperiance").innerHTML = "since " + years + " years " + months + " months";
+
+        var newRoleDate = new Date(2023, 7, 1);
+        var roleYears = now.getFullYear() - newRoleDate.getFullYear();  
+        var roleMonths = (now.getMonth() + 1) - newRoleDate.getMonth();
+        document.getElementById("currentRoleExp").innerHTML = "since " + roleYears + "yr " + roleMonths + "mos";
+    }
+    window.onload = function () { updateExp(); }
+</script>
 
 <body class="light-grey">
 
@@ -36,7 +51,7 @@
                     <div class="display-container animate-opacity">
                         <img src="images/Pro.jpg" style="width:100%" alt="Avatar">
                         <div class="display-bottomleft container text-black">
-                            <h3>naveen neelam</h3>
+                            <h3>Naveen Neelam</h3>
                         </div>
                     </div>
                     <div class="container">
@@ -160,52 +175,52 @@
                             class="fa fa-suitcase fa-fw margin-right xxlarge text-teal"></i>Experience</h2>
                     <div class="container">
                         <h5 class="opacity"><b>Wipro Limited</b><span class="small"> (June 2018 - <span
-                                    class="tag teal round">Current</span>) <i>since 5years 7months</i></span></h5>
+                                    class="tag teal round">Current</span>) <i id="fullExperiance">since 5years 7months</i></span></h5>
 
 
 
                         <div class="container opacity-min exp-con">
-                            <div class="fa fa-angle-up margin-right exp-icon"></div>
+                            <div class="fa fa-angle-up fa-fw margin-right exp-icon text-teal"></div>
                             <div class="text-theme exp-role">
                                 Senior Blockchain Developer
                                 <span class="text-grey small">Jul 2023 - <span class="tag teal round">Current</span>
-                                    <i>since 7mos</i>
+                                    <i id="currentRoleExp">since 7mos</i>
                                 </span>
                             </div>
                         </div><br>
                         <div class="container opacity-min exp-con">
-                            <div class="fa fa-angle-up margin-right exp-icon"></div>
+                            <div class="fa fa-angle-up fa-fw margin-right exp-icon text-teal"></div>
                             <div class="text-theme exp-role">
                                 Blockchain Developer
-                                <span class="text-grey small">Dec 2021 - Jul 2023 <i>1yr 6mos</i></span>                            
+                                <span class="text-grey small">Dec 2021 - Jul 2023 <i>1yr 6mos</i></span>
                             </div>
                         </div><br>
                         <div class="container opacity-min exp-con">
-                            <div class="fa fa-angle-up margin-right exp-icon"></div>
+                            <div class="fa fa-angle-up fa-fw margin-right exp-icon text-teal"></div>
                             <div class="text-theme exp-role">
                                 React Developer
-                                <span class="text-grey small">Jul 2021 - Dec 2021 <i>6mos</i></span>                            
+                                <span class="text-grey small">Jul 2021 - Dec 2021 <i>6mos</i></span>
                             </div>
                         </div><br>
                         <div class="container opacity-min exp-con">
-                            <div class="fa fa-angle-up margin-right exp-icon"></div>
+                            <div class="fa fa-angle-up fa-fw margin-right exp-icon text-teal"></div>
                             <div class="text-theme exp-role">
                                 Quality Analyst
-                                <span class="text-grey small">March 2020 - Jul 2021 <i>1yr 5mos</i></span>                            
+                                <span class="text-grey small">March 2020 - Jul 2021 <i>1yr 5mos</i></span>
                             </div>
                         </div><br>
                         <div class="container opacity-min exp-con">
-                            <div class="fa fa-angle-up margin-right exp-icon"></div>
+                            <div class="fa fa-angle-up fa-fw margin-right exp-icon text-teal"></div>
                             <div class="text-theme exp-role">
                                 Senior Associate (Cases Reviewer)
-                                <span class="text-grey small">Nov 2019 - March 2020 <i>5mos</i></span>                            
+                                <span class="text-grey small">Nov 2019 - March 2020 <i>5mos</i></span>
                             </div>
                         </div><br>
                         <div class="container opacity-min exp-con">
-                            <div class="fa fa-angle-up margin-right exp-icon"></div>
+                            <div class="fa fa-angle-up fa-fw margin-right exp-icon text-teal"></div>
                             <div class="text-theme exp-role">
                                 Associate (Google Ads Reviewer)
-                                <span class="text-grey small">11 Jun 2018 - Nov 2019 <i>1yr 5mos</i></span>                            
+                                <span class="text-grey small">11 Jun 2018 - Nov 2019 <i>1yr 5mos</i></span>
                             </div>
                         </div><br>
 
@@ -391,8 +406,8 @@
                     <div class="container">
                         <h5 class="opacity"><b></b></h5>
                         <p class="opacity-min">
-                            Downloadable OneDrive pdf file with view access (<a
-                                href="https://onedrive.live.com/?authkey=%21AASqj1So4CU1aPU&id=EFBC66F74E69718D%212551&cid=EFBC66F74E69718D&parId=root&parQt=sharedby&o=OneUp">link</a>)
+                            Downloadable google drive pdf file with view access (<a
+                                href="https://drive.google.com/file/d/1p8FLrtT7sZJLjCKaXxsd7BOyLF-Txf-o/view?usp=drive_link">link</a>)
                         </p>
                         <br>
                     </div>
@@ -404,8 +419,7 @@
                     <a href="https://in.linkedin.com/in/neelamnaveen" class="fa fa-linkedin-square hover-opacity fa-2x"></a>
                     <a href="https://github.com/neelamnaveen" class="fa fa-github hover-opacity fa-2x"></a>
                     <a href="https://www.instagram.com/naveenneelam/" class="fa fa-instagram hover-opacity fa-2x"></a>
-                    <a href="https://www.facebook.com/NaveenNeelams"
-                        class="fa fa-facebook-official hover-opacity fa-2x"></a>
+                    <a href="https://www.facebook.com/NaveenNeelams" class="fa fa-facebook-official hover-opacity fa-2x"></a>
                     <a href="https://twitter.com/Naveen__Navi" class="fa fa-twitter hover-opacity fa-2x"></a>
                 </footer>
             </center>
