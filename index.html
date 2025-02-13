@@ -21,17 +21,34 @@
     }
 </style>
 <script>
-    function updateExp() {
-        var now = new Date();
-        var wiproJoiningDate = new Date(2018, 6, 11);
-        var years = now.getFullYear() - wiproJoiningDate.getFullYear();
-        var months = (now.getMonth()) - wiproJoiningDate.getMonth();
-        document.getElementById("fullExperiance").innerHTML = "since " + years + " years " + months + " months";
+    function calculateAge(fromDate) {
+        const today = new Date();
+        const birthDate = new Date(fromDate);
+        let years = today.getFullYear() - birthDate.getFullYear();
+        let months = today.getMonth() - birthDate.getMonth();
 
-        var newRoleDate = new Date(2023, 7, 1);
-        var roleYears = now.getFullYear() - newRoleDate.getFullYear();  
-        var roleMonths = (now.getMonth() + 1) - newRoleDate.getMonth();
-        document.getElementById("currentRoleExp").innerHTML = "since " + roleYears + "yr " + roleMonths + "mos";
+        if (months < 0 || (months === 0 && today.getDate() < birthDate.getDate())) {
+            years--;
+            months += 12;
+        }
+
+        if (today.getDate() < birthDate.getDate()) {
+            months--;
+        }
+
+        if (months < 0) {
+            months += 12;
+        }
+
+        return { years, months };
+    }
+
+    function updateExp() {
+        let wiproJoining = calculateAge("2018, 6, 11");
+        document.getElementById("fullExperiance").innerHTML = "since " + wiproJoining.years + " years " + wiproJoining.months + " months";
+
+        let newRoleDate = calculateAge("2023, 7, 1");
+        document.getElementById("currentRoleExp").innerHTML = "since " + newRoleDate.years + "yr " + newRoleDate.months + "mos";
     }
     window.onload = function () { updateExp(); }
 </script>
@@ -55,7 +72,7 @@
                         </div>
                     </div>
                     <div class="container">
-                        <p><i class="fa fa-briefcase fa-fw margin-right large text-teal"></i>Senior Blockchain Developer
+                        <p><i class="fa fa-briefcase fa-fw margin-right large text-teal"></i>Sr Blockchain Developer
                             @ Wipro Limited</p>
                         <p><i class="fa fa-home fa-fw margin-right large text-teal"></i>Hyderabad, India</p>
                         <p><i class="fa fa-envelope fa-fw margin-right large text-teal"></i>neelamnaveencs@gmail.com
@@ -78,7 +95,7 @@
                                 <div class="center text-white"></div>
                             </div>
                         </div>
-                        <p>Solidity, Ethereum, Hyperledger Fabric</p>
+                        <p>Daml, Solidity, Ethereum, Corda, Hyperledger Fabric</p>
                         <div class="light-grey round-xlarge small">
                             <div class="container center round-xlarge teal" style="height:20px;width:50%">
                                 <div class="center text-white"></div>
@@ -175,14 +192,11 @@
                             class="fa fa-suitcase fa-fw margin-right xxlarge text-teal"></i>Experience</h2>
                     <div class="container">
                         <h5 class="opacity"><b>Wipro Limited</b><span class="small"> (June 2018 - <span
-                                    class="tag teal round">Current</span>) <i id="fullExperiance">since 5years 7months</i></span></h5>
-
-
-
+                                    class="tag teal round">Current</span>) <i id="fullExperiance">calculating ..</i></span></h5>
                         <div class="container opacity-min exp-con">
                             <div class="fa fa-angle-up fa-fw margin-right exp-icon text-teal"></div>
                             <div class="text-theme exp-role">
-                                Senior Blockchain Developer
+                                Sr Blockchain Developer
                                 <span class="text-grey small">Jul 2023 - <span class="tag teal round">Current</span>
                                     <i id="currentRoleExp">since 7mos</i>
                                 </span>
