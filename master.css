@@ -1,13 +1,8 @@
-.n{
+footer{
   display: flex;
   height: 4vh;
   justify-content: space-between;
   align-items: center;
-  width: 96%;
-}
-.cert {
-    font-size: 14px!important;
-    padding-bottom: 10px;
 }
 
 .exp-con {
@@ -29,14 +24,15 @@
 @media screen and (min-width: 600px) {
     .third {
         display: flex;
-        height: 98.2%;
+        margin-right: 16px;
     }
-    .nav {
+    .cols {
         display: flex;
-        width: 100%;
-        flex: 1;
     }
-    .n {
-        width: 99%;
+}
+
+@media screen and (max-width: 600px) {
+    .content {
+        padding: 0 8px;
     }
 }
