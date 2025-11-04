@@ -23,16 +23,16 @@
 <script>
     function calculateAge(fromDate) {
         const today = new Date();
-        const birthDate = new Date(fromDate);
-        let years = today.getFullYear() - birthDate.getFullYear();
-        let months = today.getMonth() - birthDate.getMonth();
+        const startDate = new Date(fromDate);
+        let years = today.getFullYear() - startDate.getFullYear();
+        let months = today.getMonth() - startDate.getMonth();
 
-        if (months < 0 || (months === 0 && today.getDate() < birthDate.getDate())) {
+        if (months < 0 || (months === 0 && today.getDate() < startDate.getDate())) {
             years--;
             months += 12;
         }
 
-        if (today.getDate() < birthDate.getDate()) {
+        if (today.getDate() < startDate.getDate()) {
             months--;
         }
 
@@ -47,8 +47,8 @@
         let wiproJoining = calculateAge("2018, 6, 11");
         document.getElementById("fullExperiance").innerHTML = wiproJoining.years + " years " + wiproJoining.months + " months";
 
-        let newRoleDate = calculateAge("2023, 7, 1");
-        document.getElementById("currentRoleExp").innerHTML = newRoleDate.years + "yr " + newRoleDate.months + "mos";
+        let newRoleDate = calculateAge("2025, 10, 1");
+        document.getElementById("currentRoleExp").innerHTML = /*newRoleDate.years + "yr "*/ + newRoleDate.months + "mos";
     }
     window.onload = function () { updateExp(); }
 </script>
@@ -72,7 +72,7 @@
                         </div>
                     </div>
                     <div class="container">
-                        <p><i class="fa fa-briefcase fa-fw margin-right large text-teal"></i>Sr. Blockchain Developer
+                        <p><i class="fa fa-briefcase fa-fw margin-right large text-teal"></i>Blockchain Lead
                             @ Wipro</p>
                         <p><i class="fa fa-home fa-fw margin-right large text-teal"></i>Hyderabad, India</p>
                         <p><i class="fa fa-envelope fa-fw margin-right large text-teal"></i>naveen.neelam@hotmail.com
@@ -91,10 +91,10 @@
                             engineering</p>
                         <hr>
                         <p class="large text-theme"><b><i
-                                    class="fa fa-industry fa-fw margin-right text-teal"></i>Industry</b></p>
+                                    class="fa fa-industry fa-fw margin-right text-teal"></i>Domains</b></p>
                         <p class="text-theme"><i class="fa fa-angle-right fa-fw margin-right text-teal"></i>Banking</p>
-                        <p class="text-theme"><i class="fa fa-angle-right fa-fw margin-right text-teal"></i>Supplychain
-                            for oil and gas</p>
+                        <p class="text-theme"><i class="fa fa-angle-right fa-fw margin-right text-teal"></i>Oil and Gas
+                            Industry</p>
                         <p class="text-theme"><i class="fa fa-angle-right fa-fw margin-right text-teal"></i>Digital
                             Marketing</p>
                         <hr>
@@ -125,15 +125,25 @@
                         <h5 class="text-theme opacity"><b>Wipro </b><span class="text-grey small"> (June 2018 - <span
                                     class="tag teal round">Present</span>) <i id="fullExperiance">calculating
                                     ..</i></span></h5>
+
                         <div class="container opacity-min exp-con">
                             <div class="fa fa-angle-up fa-fw margin-right exp-icon text-teal"></div>
                             <div class="text-theme exp-role">
-                                Sr. Blockchain Developer
-                                <span class="text-grey small">July 2023 - <span class="tag teal round">Present</span>
+                                Blockchain Lead
+                                <span class="text-grey small">Oct 2025 - <span class="tag teal round">Present</span>
                                     <i id="currentRoleExp">7mos</i>
                                 </span>
                             </div>
                         </div><br>
+
+                        <div class="container opacity-min exp-con">
+                            <div class="fa fa-angle-up fa-fw margin-right exp-icon text-teal"></div>
+                            <div class="text-theme exp-role">
+                                Sr. Blockchain Developer
+                                <span class="text-grey small">July 2023 - Sept 2025 <i>2yrs 2mos</i></span>
+                            </div>
+                        </div><br>
+
                         <div class="container opacity-min exp-con">
                             <div class="fa fa-angle-up fa-fw margin-right exp-icon text-teal"></div>
                             <div class="text-theme exp-role">
@@ -166,12 +176,11 @@
                         <p class="text-theme opacity-min cer"><i
                                 class="fa fa-angle-right fa-fw margin-right text-teal"></i><b
                                 class="opacity-min">Blockchain
-                                Platforms: </b>Polygon, Ethereum, Hedera, Canton, Hyperledger fabric, Corda.
+                                Platforms: </b>Canton, Hedera, Polygon, Ethereum, Corda.
                         </p>
                         <p class="text-theme opacity-min cer"><i
                                 class="fa fa-angle-right fa-fw margin-right text-teal"></i><b
-                                class="opacity-min">Languages & Frameworks:</b> Solidity, Daml, TypeScript, NestJS,
-                            NodeJS, React.
+                                class="opacity-min">Languages & Frameworks:</b> Daml, Solidity, TypeScript, NestJS, NodeJS, Python.
                         </p>
                         <p class="text-theme opacity-min cer"><i
                                 class="fa fa-angle-right fa-fw margin-right text-teal"></i><b
@@ -181,13 +190,15 @@
                         <p class="text-theme opacity-min cer"><i
                                 class="fa fa-angle-right fa-fw margin-right text-teal"></i><b class="opacity-min">IDE
                                 Tools: </b>VS
-                            Code, PyCharm, IntelliJ IDEA.
+                            Code, PyCharm.
                         </p>
                         <p class="text-theme opacity-min cer"><i
                                 class="fa fa-angle-right fa-fw margin-right text-teal"></i><b
-                                class="opacity-min">Others:</b> Ansible,
-                            Azure, AWS, Swagger, Docker, Robot
-                            Framework.
+                                class="opacity-min">Others:</b> Google Cloud, AWS, Swagger, Docker, Ansible, Robot Framework.
+                        </p>
+                        <p class="text-theme opacity-min cer"><i
+                                class="fa fa-angle-right fa-fw margin-right text-teal"></i><b
+                                class="opacity-min">Experiance:</b> AI-Enhanced Development, Develop APIs for wallet, custody, and trading services.
                         </p>
                     </div>
                     <br>
@@ -197,6 +208,10 @@
                     <h2 class="text-grey padding-16"><i
                             class="fa fa-certificate fa-fw margin-right xxlarge text-teal"></i>Certfications</h2>
                     <div class="container">
+                        <p class="text-theme opacity-min cer"><i
+                                class="fa fa-angle-right fa-fw margin-right text-teal"></i>Google Associate Cloud Engineer (<a
+                                href="https://www.credly.com/badges/32df3e1d-8523-4792-ad7a-f3f364a0ea88/public_url">link</a>)
+                        </p>
                         <p class="text-theme opacity-min cer"><i
                                 class="fa fa-angle-right fa-fw margin-right text-teal"></i>Win Over Your Customer (<a
                                 href="https://drive.google.com/file/d/1xyAQm7jpWnnWu9gES2sSS8h20eihqAC4/view?usp=sharing">link</a>)
@@ -216,10 +231,6 @@
                             bootcamp (MERN) (<a
                                 href="https://www.udemy.com/certificate/UC-8dbb3b7c-7bd5-4b52-9394-f3696eb4efb4/">link</a>)
                         </p>
-                        <!-- <div class="opacity-min cert">Machine Learning for Absolute Beginners - Level 2 (<a href="https://drive.google.com/file/d/1uKalWrWeJRLnExraOSt3cmsGERMkza4f/view?usp=sharing">link</a>)</div>
-                        <div class="opacity-min cert">Machine Learning for Absolute Beginners - Level 1 (<a href="https://drive.google.com/file/d/1uKalWrWeJRLnExraOSt3cmsGERMkza4f/view?usp=sharing">link</a>)</div> -->
-                        <!-- <div class="opacity-min cert">Robot Framework Test Automation - Level 2 (<a href="https://udemy-certificate.s3.amazonaws.com/pdf/UC-09d6f07d-b8df-4e2f-bb8b-768a6a9e5501.pdf">link</a>)</div>
-                        <div class="opacity-min cert">Robot Framework Test Automation - Level 1 (<a href="https://udemy-certificate.s3.amazonaws.com/pdf/UC-eb72192f-c77f-43aa-bba4-ffac2b3b96e0.pdf">link</a>)</div> -->
                     </div>
                     <br>
                 </div>
@@ -229,8 +240,7 @@
                             class="fa fa-bookmark fa-fw margin-right xxlarge text-teal"></i>Projects</h2>
                     <div class="container">
                         <h5 class=""><b class="opacity">Digital Assets (Tokenization platform for bank): :</b></h5>
-                        <p><b class="opacity">Technologies :</b> <span class="opacity-min"> Ethereum, Hedera, Canton,
-                                Nest.js, Typescript, Solidity, Daml. </p></span>
+                        <p><b class="opacity">Technologies :</b> <span class="opacity-min"> Canton, Hedera, Ethereum, Nest.js, Typescript, Daml, Solidity.</p></span>
                         <p><b class="opacity">Description :</b> <span class="opacity-min">Platform for tokenizing the
                                 assets on various public and private blockchains.</span></p>
                         <p><b class="opacity">Role and Responsibilites :</b></p>
@@ -238,7 +248,8 @@
                         <p class="opacity-min">Designed and developed modular, reusable microservices using Nest.js to
                             support PoC
                             implementations across Canton, Hedera, and Ethereum networks.</p>
-                        <p class="opacity-min">Implemented the bond tokenization endpoints for minting, distributing, burning, etc. for Hedera and Canton blockchains.</p>
+                        <p class="opacity-min">Implemented the bond tokenization endpoints for minting, distributing,
+                            burning, etc. for Hedera and Canton blockchains.</p>
                         <p class="opacity-min">Explored ERC3643 protocol and developed the re-usable PoC</p>
                         <p class="opacity-min">Integrated blockchain SDKs and smart contract interfaces to enable
                             end-to-end tokenization of
@@ -256,13 +267,7 @@
                                 manual intervention.</span></p>
                         <p><b class="opacity">Role and Responsibilites :</b></p>
                         <p><b class="opacity">Blockchain Developer:</b> </p>
-                        <!-- <p class="opacity-min">I was part of requirements gathering in SDLC and worked on various
-                            studies for project initiation.
-                        <p class="opacity-min">Introduced & developed architect level solution for blockchain micro
-                            service and continuously acquiring knowledge in all aspects like security etc.,</p> -->
                         <p class="opacity-min">Developing production ready upgradable smart contracts.</p>
-                        <!-- <p class="opacity-min">Optimized existing smart contracts for cost savings.</p> -->
-                        <!-- <p class="opacity-min">Helped DevOps team for creation and deployment of UAT environment.</p> -->
                         <p class="opacity-min">Stimulating and integrating API's to anchor application database state in
                             blockchain.</p>
                         <hr>
