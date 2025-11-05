@@ -24,6 +24,12 @@
     function calculateAge(fromDate) {
         const today = new Date();
         const startDate = new Date(fromDate);
+
+        if (isNaN(startDate)) {
+            console.error("Invalid date:", fromDate);
+            return { years: 0, months: 0 };
+        }
+
         let years = today.getFullYear() - startDate.getFullYear();
         let months = today.getMonth() - startDate.getMonth();
 
@@ -44,11 +50,11 @@
     }
 
     function updateExp() {
-        let wiproJoining = calculateAge("2018, 6, 11");
+        let wiproJoining = calculateAge("2018-06-11");
         document.getElementById("fullExperiance").innerHTML = wiproJoining.years + " years " + wiproJoining.months + " months";
 
-        let newRoleDate = calculateAge("2025, 10, 1");
-        document.getElementById("currentRoleExp").innerHTML = /*newRoleDate.years + "yr "*/ + newRoleDate.months + "mos";
+        let newRoleDate = calculateAge("2025-10-01");
+        document.getElementById("currentRoleExp").innerHTML = /*newRoleDate.years + "yr "*/ newRoleDate.months + "mos";
     }
     window.onload = function () { updateExp(); }
 </script>
