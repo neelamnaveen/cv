@@ -36,3 +36,13 @@ footer{
         padding: 0 8px;
     }
 }
+
+.image-wrapper img {
+  -webkit-mask-image: linear-gradient(to bottom, rgb(51, 49, 49) 90%, rgba(134, 134, 134, 0) 100%);
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-size: cover;
+
+  mask-image: linear-gradient(to bottom, rgb(70, 69, 69) 90%, rgba(110, 110, 110, 0) 100%);
+  mask-repeat: no-repeat;
+  mask-size: cover;
+}
